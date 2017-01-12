@@ -1,0 +1,39 @@
+// Grids
+
+.group::after {
+    clear: both;
+}
+
+.group::before, 
+.group::after {
+    content: "";
+    display: table;
+}
+
+.grid {
+    clear: both;
+}
+
+.grid > [class*="grid-"] {
+	width: 100%;
+	padding-right: 0 !important;
+}
+
+.grid > [class*="grid-"] {
+    float: left;
+    min-height: 2px;
+}
+
+.grid > .grid-1-3 {   
+	@include respond-to('small') {
+		width: 33.33%;
+	}
+}
+
+.grid > .grid-2-3 {   
+	@include respond-to('small') {
+		width: 66.66%;
+	}
+}
+
+

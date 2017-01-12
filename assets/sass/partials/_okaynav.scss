@@ -1,0 +1,133 @@
+// okayNav
+
+body.okayNav-loaded {
+  overflow-x: hidden;
+}
+
+.okayNav:not(.loaded) {
+  visibility: hidden;
+  user-select: none;
+}
+
+.okayNav ul {
+  /* We want two navigations - one hidden and one visible */
+  float: left;
+}
+
+.okayNav a {
+  color: $c-tf-grey;
+  position: relative;
+  z-index: 1;
+}
+
+.okayNav__nav--visible {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.okayNav__nav--visible li {
+  display: inline-block;
+}
+
+.okayNav__nav--visible a {
+  display: block;
+  transition: color 200ms cubic-bezier(0.55, 0, 0.1, 1);
+  padding: 15px 15px;
+}
+
+.okayNav__nav--visible a:hover {
+  color: $c-tf-orange;
+}
+
+
+/* Link styling for the off-screen part of the nav */
+
+.okayNav__nav--invisible {
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+}
+
+.okayNav__nav--invisible a {
+  background: white;
+  width: 240px;
+  display: block;
+  padding: 15px;
+}
+
+.okayNav__nav--invisible.nav-left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.okayNav__nav--invisible.nav-right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.okayNav__nav--invisible.transition-enabled {
+  transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.okayNav__nav--invisible.nav-open {
+  transform: translateX(0);
+}
+
+
+/* Kebab icon */
+
+.okayNav__menu-toggle {
+  position: relative;
+  transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  float: left;
+  z-index: 1;
+  top: 15px;
+}
+
+.okayNav__menu-toggle.okay-invisible {
+  position: absolute;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.okayNav__menu-toggle span {
+  display: block;
+  position: absolute;
+  margin: auto;
+  height: 4px;
+  width: 4px;
+  background: $c-tf-grey;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.okayNav__menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.okayNav__menu-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.okayNav__menu-toggle span:nth-child(3) {
+  bottom: 0;
+}
+
+.okayNav__menu-toggle.icon--active {
+  /* Kebab icon when off-screen nav is open */
+  transform: rotate(90deg);
+}
+
+.okayNav__menu-toggle.icon--active span {
+  background: $c-tf-orange;
+}

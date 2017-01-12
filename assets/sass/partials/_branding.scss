@@ -1,0 +1,18 @@
+// Branding
+// aspect ratio: 298 * 99
+
+.tf-logo {
+	display: block;
+	text-indent: -9999px;
+	width: 150px;
+	height: 50px;
+	background: url(../images/tf-logo.svg) no-repeat;
+	background-size: contain;
+	margin-top: 25px;
+		
+	@include respond-to('medium') {
+		width: 200px;
+		height: 66px;
+	}
+}
+

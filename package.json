@@ -1,0 +1,23 @@
+{
+  "name": "grunt-tf",
+  "version": "0.0.1",
+  "author": "Christian Hamann",
+  "homepage": "http://turnfriendly.com",
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "request": "~2.51.0",
+    "time-grunt": "~1.0.0",
+    "load-grunt-tasks": "~2.0.0",
+    "grunt-contrib-sass": "latest",
+    "grunt-browser-sync": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "latest",
+    "grunt-imageoptim": "latest",
+	"grunt-autoprefixer": "latest"
+  }
+}

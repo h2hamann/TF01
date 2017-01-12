@@ -1,0 +1,125 @@
+// Typography
+
+
+/* Links */
+a img 	{ border: none !important; }
+a:active, a:hover { outline: none !important; }
+
+a {
+    text-decoration: none;
+    color: $link;
+}
+
+a:hover {
+    color: $link-hover; 
+}
+
+a[href^="tel:"] {
+    background-image: none;
+}
+
+a[href^="tel:"]:before {
+    content: "\260e";
+    padding-right: 0.238em;
+}
+
+
+
+
+
+
+html {        
+    font-family:Calibri, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: $c-tf-grey;
+    background-color: white;
+}
+
+
+h1, h2, h3, h4, h5 {
+    text-rendering: optimizelegibility;
+}
+
+/* 1.333 - Perfect Fourth
+
+    99.376em
+    74.551em
+    55.927em
+    41.956em
+    31.475em
+    23.612em
+    17.713em
+    13.288em
+    9.969em
+    7.478em
+    5.61em
+    4.209em
+    3.157em
+    2.369em
+    1.777em
+    1.333em
+    1em
+    0.75em
+    0.563em
+    0.422em
+    0.317em
+    0.238em
+    0.178em
+*/
+
+
+html {
+    font-size: 1em;
+}
+
+@media all and (min-width: 579px) { 
+    html {
+        font-size: 1.125em;
+    }
+}
+
+body {
+    line-height: 1.45;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.157em;
+}
+
+h2 {
+    font-size: 2.369em;
+}
+
+h3 {
+    font-size: 1.777em;
+}
+
+h4 {
+    font-size: 1.333em;
+}
+
+small,
+.font_small {
+    font-size: 0.75em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
